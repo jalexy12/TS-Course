@@ -49,12 +49,21 @@ console.log(coordinates);
 
 
 // 2. Variables declared / initialized on two different lines
-
 let words = ['red', 'green', 'blue'];
 let foundWord: boolean;
 
 for (let i = 0; i < words.length; i++) {
   if (words[i] === 'green') {
     foundWord = true;
+  }
+}
+
+// 3. When a variable has a type that can't be inferred
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
   }
 }
