@@ -3,8 +3,15 @@
     "@types/faker": "^5.1.2",
     "@types/googlemaps": "^3.39.13",
     "axios": "^0.20.0",
+    "concurrently": "^5.3.0",
     "faker": "^5.1.0",
+    "nodemon": "^2.0.4",
     "ts-node": "^9.0.0"
+  },
+  "scripts": {
+    "start:build": "tsc --build sort/tsconfig.json -w",
+    "start:run": "nodemon sort/build/index.js",
+    "start": "concurrently npm:start:*"
   },
   "devDependencies": {
     "typescript": "^4.0.3"
